@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<body class="container">
+<header>
+    <%- include('./adminHeader'); %>
+</br>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>Création</h1>
+        <p>Création évenement</p>
+    </div>
+    <form action="" method="post"class="ui form">
+        <div class="field">
+            <label for="imagePath">imagePath</label>
+            <input type="text" name="imagePath"   id="text" id="imagePath"></input>
+            </div>
+      <div class="field">
+         <label for="nom">Nom</label>
+         <input type="text" name="nom"   id="text" id="nom"></input>
+         </div>
+        </br>
+         <div>
+         <label for="description">Description</label>
+         <textarea name="description"  cols="110" id="text" id="description"></textarea>
+        </div>
+         </br>
+        <div>
+         <label for="Datee">Datee</label>
+         <input type="text" name="Datee"   id="text" id="Datee"></input>
+        </div>
+         </br>
+         
+         <label for="nombrePlace">Nombre de Place</label>
+         <input type="text" name="nombrePlace"   id="text" id="nombrePlace"></input>
+        </div>
+         </br>
+        <div>
+         <label for="SalleEvenement">Salle de l'évenement</label>
+         <input type="text" name="SalleEvenement"   id="text" id="SalleEvenement"></input>
+        </div>
+      </div><br/><br/>
+      <button type="submit" class="ui blue labeled submit icon button">
+         <i class="icon edit"></i>
+         Envoyer
+      </button>
+   </form>
+</main>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<footer>
+    <%- include('./footer'); %>
+</footer>
+
+</body>
+</html>

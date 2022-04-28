@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<body class="container">
+<header>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <%- include('./header'); %>
+    
+</header>
+<main>
+    <div class="jumbotron">
+        <h1>Modification / Suppression</h1>
+        <p></p>
+    </div>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">imagePath</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Description</th>
+        <th scope="col">Date</th>
+        <th scope="col">Nombre de Place</th>
+        <th scope="col">Salle de l'évenemen</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% listeEvenement.forEach(function(evenement) { %>
+        <tr>
+            <td><img class="fit-picture"src="<%evenement.imagePath%>"alt="film"></td>
+            <td><%= evenement.nom %></td>
+            <td><%=evenement.description %></td>
+            <td><%= evenement.Datee %></td>
+            <td><%= evenement.nombrePlace %></td>
+            <td><%=  evenement.SalleEvenement %></td>
+           
+            <form action="/admin/listevenement/modifEvenement/<%=evenement.nom%>" method="POST">
+                <input type="hidden" name="_method" value="POST"/>
+            <td>  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a></button>
+            </form>
+          
+
+               
+              
+            <form action="/<%=evenement.nom%>?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-default">
+      <a>  <span class="glyphicon glyphicon-trash"></span>
+           </a></button>
+        </form>
+            </a>
+            </td>
+            
+
+            
+        </tr>
+        <% }) %>
+      
+    </tbody>
+  </table>
+  
+</main>
+<footer>
+    <%- include('./footer'); %>
+</footer>
+
+</body>
+</html>

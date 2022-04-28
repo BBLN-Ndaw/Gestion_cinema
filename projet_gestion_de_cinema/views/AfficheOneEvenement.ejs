@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<body class="container">
+<header>
+    <%- include('./header'); %>
+</header>
+
+<main>
+    <h1>Détail de l'événement : </h1>
+
+    <div class="jumbotron">
+        
+        <li><%= "nom : "+locals.listeEvenement.nom %></li>
+        <li><%="Desscription :"+ locals.listeEvenement.description %></li>
+        <li><%= "Date :"+ locals.listeEvenement.Datee %></li>
+        <li><%= "Nombre de Place :"+ locals.listeEvenement.nombrePlace %></li>
+        <li><%= "Salle de l'évenement :"+ locals.listeEvenement.SalleEvenement %></li>
+
+    </div>
+    <div></br></br></br></br></br></br></br></br></br></br></br></div>
+
+            <div>
+                <form action="" method="POST"> 
+                <button type="submit">Acheter un ticket</button>
+                </form>
+          </div>
+  
+</main>
+
+<footer>
+    <%- include('./footer'); %>
+</footer>
+
+</body>
+</html>

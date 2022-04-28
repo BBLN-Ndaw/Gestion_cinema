@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<body class="container">
+<header>
+    <%- include('./header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h1>Création</h1>
+        <p>Création évenement</p>
+    </div>
+     </br>
+      
+      <div>
+        <% listeEvenement.forEach(function(evenement) { %>
+            <div>
+                  
+                   <img class="fit-picture" src="<%evenement.imagePath%>" alt="film">
+                   <li><%= "nom : "+evenement.nom %></li>
+                   <li><%="Desscription :"+ evenement.description %></li>
+                   <li><%= "Date :"+ evenement.Datee %></li>
+                   <li><%= "Nombre de Place :"+ evenement.nombrePlace %></li>
+                   <li><%= "Salle de l'évenement :"+ evenement.SalleEvenement %></li>
+                   <li><a href="/user/evenement/<%= evenement.nom %>">lire ici</a></li>
+            </div>
+            <% }) %>
+      </div>
+     
+</main>
+
+<footer>
+    <%- include('./footer'); %>
+</footer>
+
+</body>
+</html>

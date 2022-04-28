@@ -1,0 +1,113 @@
+<h1>Bienvenue sur la page d'achat de ticket</h1>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Paiement par carte bancaire</h3>
+			
+
+					<form method="post" data-centralpay="form" action="">
+				
+						<div data-centralpay="errors" class="custom-form"></div>
+						<p data-form="main-description" class="sr-only">Card data</p>
+						<div class="form-row mt-3" data-toggle="popover-example-data">
+						   <div class="form-group col-6">
+							  <div class="has-feedback input-group">
+								 <div class="input-group-prepend">
+									<div class="input-group-text"><div class="ico ico-user"></div></div>
+								 </div>
+								 <input data-centralpay="prenom" type="text" name="prenom" autocomplete="off"
+									   data-form="card-user" class="form-control" placeholder="First name" required="required" />
+							  </div>
+						   </div>
+						   <div class="form-group col-6">
+							  <div class="has-feedback input-group">
+								 <div class="input-group-prepend">
+									<div class="input-group-text"><div class="ico ico-user"></div></div>
+								 </div>
+								 <input data-centralpay="lastName" type="text" name="nom" autocomplete="off"
+									   data-form="card-user" class="form-control" placeholder="Last name" required="required" />
+							  </div>
+						   </div>
+						</div>
+						<div data-form="card-validation">
+						   <div class="form-row">
+							  <div class="form-group col-12">
+								 <div class="has-feedback input-group">
+									<div class="input-group-prepend">
+									   <div class="input-group-text"><div class="ico ico-envelope"></div></div>
+									</div>
+									<input data-centralpay="card[holderEmail]" type="email" name="email"
+										  autocomplete="off" class="form-control" data-form="card-user"
+										  placeholder="E-mail" required="required" />
+								 </div>
+							  </div>
+						   </div>
+			
+						   <div id="card-option" class="new-card-ok">
+							  <div class="form-row">
+								 <div class="form-group col-12 new-card">
+									<div class="has-feedback input-group">
+									   <div class="input-group-prepend">
+										  <div class="input-group-text"><div class="ico ico-cb"></div></div>
+									   </div>
+									   <input data-centralpay="numcar" type="tel" pattern="([0-9 ]{14,20})?" autocomplete="off"
+											 class="form-control form-card-data form-card-number" placeholder="Credit card number"
+											 maxlength="20" data-form="card-data" name ="numcar" />
+									</div>
+								 </div>
+							  </div>
+							  <div class="form-row align-items-center">
+								 <div class="form-group col-8 new-card">
+									<div class="has-feedback input-group">
+									   <div class="input-group-prepend">
+										  <div class="input-group-text"><div class="ico ico-calendar"></div></div>
+									   </div>
+									   <input data-centralpay="card[expirationMonth]" type="tel" pattern="[0-9]{1,2}"
+											 maxlength="2" autocomplete="off" class="form-control form-card-data" placeholder="MM"
+											 data-form="card-data" name="mois" />
+									   <input data-centralpay="card[expirationYear]" type="tel" max="9999" inputmode="tel"
+											 pattern="[0-9]{4}" autocomplete="off" class="form-control form-card-data"
+											 data-form="card-data" placeholder="YYYY" name="annee"/>
+									</div>
+								 </div>
+								 <div class="form-group col-8 stored-card use-cvv text-right">Veuillez entrer les informations de votre CB/div>
+								 <div class="form-group col-4 use-cvv">
+									<div class="has-feedback input-group">
+									   <div class="input-group-prepend">
+										  <div class="input-group-text"><div class="ico ico-lock"></div></div>
+									   </div>
+									   <input data-centralpay="card[cvc]" type="tel" pattern="[0-9]{3,4}" maxlength="4"
+											 autocomplete="off" class="form-control form-card-data" placeholder="CVV2"
+											 name="cvv"/>
+									</div>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+						<div class="text-center mt-2">
+						   <button class="btn btn-cpay" type="submit" value="submit" data-form="submit" data-toggle="popover"
+								 data-placement="bottom" data-trigger="hover">
+							  <div class="np-button-content">
+								 <span data-display="submit-value">Payer</span>
+								 <div class="np-loader"></div>
+							  </div>
+						   </button>
+						</div>
+					 </form>
+					
+					
+			</div>
+			
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<title>Gestion des événements de cinéma</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body { padding-top:50px; }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <a class="navbar-brand" href="/admin/Ajouterevenement">Créer un événement</a>
+   <ul class="navbar-nav mr-auto">
+     <li class="nav-item">
+      <form action="/admin/logout?_method=DELETE" method="POST"> <!--si on est à l'url \logout alors lance la requête HTTP DELETE-->
+        <button type="submit">Log Out</button>
+      </form>
+     </li>
+   </ul>
+ </nav>
+ <div class="div ui main container">
+    <div class="ui negative message">
+    </div>
+   

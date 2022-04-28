@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<body class="container">
+<header>
+    <%- include('./adminHeader'); %>
+</br>
+</header>
+
+<main>
+   
+        <div class="jumbotron">
+            <h1>Modification</h1>
+            <p>Modification événement</p>
+        </div>
+        <form action="" method="post"class="ui form">
+            <input type="hidden" name="_id" value="{{evenement.nom}}">
+
+        <div class="form-group">
+         
+            <label for="imagePath">imagePath</label>
+            <input type="text" name="imagePath" class="form-control" id="text" id="imagePath"></input>
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" name="nom"   id="text" id="nom"></input>
+          </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description"  cols="110" id="text" id="description"></textarea>
+          </div>
+          <div class="form-group col-md-6" >
+            <label for="Datee">Date</label>
+            <input type="text" class="form-control" name="Datee"   id="text" id="Datee"></input>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="nombrePlace">Nombre de Place</label>
+            <input type="text" class="form-control" type="text" name="nombrePlace"   id="text" id="nombrePlace"></input>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="SalleEvenement">Salle de l'évenement</label>
+            <input type="text" class="form-control" type="text" name="SalleEvenement"   id="text" id="SalleEvenement"></input>
+          </div>
+        </div>
+       
+        <button class="btn btn-primary" type="submit">Crééer</button>
+      </form>
+    
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+        </div>
+</main>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<footer>
+    <%- include('./footer'); %>
+</footer>
+
+</body>
+</html> 
